@@ -73,45 +73,44 @@ Sprint 1 sona ererken projenin temel altyapı tasarımı ve girdi/çıktı veri 
 
 Henüz çalışan bir kod parçası veya son kullanıcı arayüzü (UI) bulunmamaktadır. Ancak bu sprintin en büyük somut çıktısı, projemizin **Sistem Mimarisi Diyagramı** ve kullanıcı senaryolarının (wireframe) oluşturulmasıdır.Çiftçinin sisteme nasıl girdi sağlayacağı ve sistemin arka planda hangi süzgeçlerden geçerek sonuç üreteceği görselleştirilmiştir.
 
-* **Ekran Görüntüsü:**
-    ```mermaid
+
+```mermaid
 flowchart TD
     %% Katman 1
     subgraph Katman1 [1. Katman: Tarımsal Girdiler]
         C[Çiftçi Girdisi] -->|Mahsul & Toprak Türü| DB[(Veritabanı)]
         DB -->|Baz Sulama Süresi| Opt
     end
-
     %% Katman 2
     subgraph Katman2 [2. Katman: Çevresel Girdiler]
         API[Meteoroloji API] -->|Sıcaklık, Yağış, Rüzgar| Hava(Canlı Hava Analizi)
         Hava --> Opt
     end
-
     %% Karar Motoru
     subgraph KararMotoru [Karar Mekanizması & Optimizasyon]
         Opt[Dinamik Optimizasyon Motoru] -->|F_toprak & F_sicaklik| F1{Yağmur Filtresi}
-        
-        F1 -- Yağış > %60 VEYA > 5mm --> Iptal[Sulama Tamamen İptal]
-        F1 -- Yağış Yok --> F2{Buharlaşma Filtresi}
-        
-        F2 -- Sıcaklık > 35°C & Saat Öğlen --> Otele[Saati Akşama Ötele]
-        F2 -- Şartlar Uygun --> Onay[Nihai Süreyi Onayla]
-    end
 
+        F1 -->|Yağış > %60 VEYA > 5mm| Iptal[Sulama Tamamen İptal]
+        F1 -->|Yağış Yok| F2{Buharlaşma Filtresi}
+
+        F2 -->|Sıcaklık > 35°C & Saat Öğlen| Otele[Saati Akşama Ötele]
+        F2 -->|Şartlar Uygun| Onay[Nihai Süreyi Onayla]
+    end
     %% Katman 3
     subgraph Katman3 [3. Katman: Çıktı ve Reçete]
         Iptal -.-> Bildirim(Asistan Notu Oluştur)
         Otele -.-> Bildirim
         Onay -.-> Bildirim
-        
+
         Bildirim --> UI[📱 Çiftçi Arayüzü: Saat ve Süre Bildirimi]
     end
-    
+
     style Iptal fill:#ff6666,stroke:#333,stroke-width:2px,color:#fff
     style Otele fill:#ffcc00,stroke:#333,stroke-width:2px,color:#000
     style Onay fill:#66cc66,stroke:#333,stroke-width:2px,color:#000
     style UI fill:#3399ff,stroke:#333,stroke-width:2px,color:#fff
+```
+    
 
 
 ### 5. Sprint Review (Sprint İncelemesi)
