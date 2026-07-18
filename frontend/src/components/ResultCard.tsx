@@ -44,7 +44,7 @@ export function ResultCard({ result }: ResultCardProps) {
 
   return (
     <Card className="animate-fade-up overflow-hidden">
-      <div className={cn("flex items-start gap-4 p-6", meta.softClass)}>
+      <div className={cn("flex items-center gap-4 p-6", meta.softClass)}>
         <span
           className={cn(
             "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-card shadow-sm",
@@ -53,17 +53,11 @@ export function ResultCard({ result }: ResultCardProps) {
         >
           <Icon className="h-6 w-6" />
         </span>
-        <div className="space-y-2">
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge variant={meta.badgeVariant}>
-              <Icon className="h-3.5 w-3.5" />
-              {meta.label}
-            </Badge>
-            <Badge variant="outline">
-              {result.source === "backend" ? "Backend" : "Canlı Önizleme"}
-            </Badge>
-          </div>
-          <h3 className="font-sans text-lg font-semibold text-foreground">
+        <div className="min-w-0 space-y-1.5">
+          <Badge variant="outline" className="border-border/70 bg-card shadow-sm">
+            {result.source === "backend" ? "Backend" : "Canlı Önizleme"}
+          </Badge>
+          <h3 className="font-sans text-lg font-semibold leading-snug text-foreground">
             {meta.headline}
           </h3>
         </div>

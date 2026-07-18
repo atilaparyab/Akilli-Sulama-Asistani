@@ -45,14 +45,14 @@ function App() {
         <div className="absolute left-[16%] top-0 h-[240px] w-[240px] rounded-full bg-brand-green/25 blur-3xl" />
         <div className="absolute right-[14%] top-[-30px] h-[220px] w-[220px] rounded-full bg-brand-blue/25 blur-3xl" />
       </div>
-      <header className="relative border-b border-border/60 bg-card/60 backdrop-blur-md">
-        <div className="container flex items-center justify-between py-4">
+      <header className="sticky top-0 z-40 border-b border-border bg-card">
+        <div className="container flex items-center justify-between py-3.5">
           <div className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-brand-deep-blue via-brand-blue to-brand-green text-white shadow-card">
-              <Droplets className="h-6 w-6" />
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-deep-blue via-brand-blue to-brand-green text-white">
+              <Droplets className="h-5 w-5" />
             </span>
             <div className="leading-tight">
-              <p className="font-sans text-lg font-bold text-foreground">
+              <p className="font-sans text-base font-bold tracking-tight text-foreground">
                 AgroAsistan
               </p>
               <p className="text-xs text-muted-foreground">
@@ -60,8 +60,8 @@ function App() {
               </p>
             </div>
           </div>
-          <span className="hidden items-center gap-1.5 rounded-full border border-border bg-background/70 px-3 py-1.5 text-xs font-medium text-muted-foreground sm:flex">
-            <Satellite className="h-3.5 w-3.5 text-primary" />
+          <span className="hidden items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground sm:inline-flex">
+            <Satellite className="h-3.5 w-3.5" />
             Open-Meteo canlı veri
           </span>
         </div>
