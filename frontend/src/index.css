@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 194 45% 98%;
+    --foreground: 104 30% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 104 30% 16%;
+
+    --primary: 195 67% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 194 64% 73%;
+    --secondary-foreground: 196 75% 22%;
+
+    --muted: 194 40% 94%;
+    --muted-foreground: 200 12% 42%;
+
+    --accent: 123 29% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 194 34% 88%;
+    --input: 194 34% 88%;
+    --ring: 195 67% 45%;
+
+    --brand-deep-blue: 196 75% 32%;
+    --brand-blue: 195 67% 45%;
+    --brand-light-blue: 194 64% 73%;
+    --brand-grass: 59 66% 65%;
+    --brand-green: 123 29% 50%;
+    --brand-dark-green: 104 38% 24%;
+
+    --approved: 123 32% 42%;
+    --approved-foreground: 0 0% 100%;
+    --approved-soft: 123 38% 93%;
+
+    --postponed: 59 62% 58%;
+    --postponed-foreground: 104 45% 18%;
+    --postponed-soft: 59 68% 92%;
+
+    --canceled: 195 67% 45%;
+    --canceled-foreground: 0 0% 100%;
+    --canceled-soft: 194 62% 93%;
+
+    --radius: 0.85rem;
+  }
+
+  .dark {
+    --background: 200 32% 9%;
+    --foreground: 194 40% 94%;
+
+    --card: 200 30% 12%;
+    --card-foreground: 194 40% 94%;
+
+    --primary: 194 64% 62%;
+    --primary-foreground: 200 40% 10%;
+
+    --secondary: 196 45% 24%;
+    --secondary-foreground: 194 60% 88%;
+
+    --muted: 200 24% 18%;
+    --muted-foreground: 194 20% 68%;
+
+    --accent: 123 30% 52%;
+    --accent-foreground: 200 40% 10%;
+
+    --border: 200 22% 22%;
+    --input: 200 22% 22%;
+    --ring: 194 64% 62%;
+
+    --approved: 123 34% 52%;
+    --approved-foreground: 200 40% 10%;
+    --approved-soft: 123 24% 18%;
+
+    --postponed: 59 55% 60%;
+    --postponed-foreground: 104 45% 14%;
+    --postponed-soft: 59 30% 20%;
+
+    --canceled: 194 64% 62%;
+    --canceled-foreground: 200 40% 10%;
+    --canceled-soft: 196 40% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04";
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-sans;
+  }
+}
