@@ -12,15 +12,15 @@ from app import models, schemas
 from app.weather_service import hava_durumu_getir
 from app.decision_engine import sulama_onerisi_hesapla
 
-# Tabloları oluştur (ilk çalıştırmada / Alembic kullanılana kadar pratik yöntem)
+
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="AgroAsistan API", version="0.1.0")
 
-# React frontend'in erişebilmesi için CORS
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # geliştirme aşamasında; production'da domain kısıtlanmalı
+    allow_origins=["*"],  
     allow_methods=["*"],
     allow_headers=["*"],
 )
