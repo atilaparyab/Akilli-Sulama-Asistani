@@ -37,7 +37,7 @@ AgroAsistan; tarımda su israfını önlemek ve mahsul verimliliğini artırmak 
 * Sürdürülebilir tarım işletmeleri
 * Akıllı tarım teknolojilerine (IoT) entegre olmak isteyen üreticiler
 
-<h1 align="center">⚡ SPRINT 2 ⚡</h1>
+<h1 align="center"> SPRINT 1 </h1>
 
 ### 1. Product Backlog (Ürün İş Listesi)
 
