@@ -149,7 +149,8 @@ Grup içerisinde API uç noktalarının (endpoints) ve karar motorunun (Decision
 | :--- | :--- | :--- | :--- |
 | Yapay Zeka / LLM Chatbot Entegrasyonunun Sağlanması | Alembic Kurulumu ile Veritabanı Göç (Migration) Yönetimi | Frontend ve Backend Uçtan Uca (E2E) Testleri | **(3 Puan)** FastAPI ile Arka Uç İskeleti ve API Uç Noktaları |
 | IoT (Fiziksel Toprak Nemi Sensörü) Simülasyonunun Yazılması | JWT Tabanlı Çiftçi Kullanıcı Girişi (Authentication) Yapısının Kurulması | | **(3 Puan)** PostgreSQL Veritabanı Modelleri (SQLAlchemy) |
-| Bölgesel Su Muhasebesi ve Kooperatif Haritası Altyapısı | | **(2 Puan)** Open-Meteo API Entegrasyonu ve Hata Yönetimi |
+| Bölgesel Su Muhasebesi ve Kooperatif Haritası Altyapısı | 
+| **(2 Puan)** Open-Meteo API Entegrasyonu ve Hata Yönetimi |
 | | | | **(2 Puan)** Karar Motoru (Fuzzy Logic) Çarpanlarının Kodlanması |
 | | | | **(Ekstra Başarı)** React ile Çiftçi Kontrol Paneli (Frontend) Geliştirmesi |
 
