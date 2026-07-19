@@ -16,10 +16,6 @@ Ekip 50 AgroTech Team
 **Proje İsmi**
 AgroAsistan (Akıllı Sulama Asistanı)
 
-**Product Backlog URL**
-<p align="center">
-  <img src="trello.png" alt="Trello Backlog" width="600">
-</p>
 
 **Proje Açıklaması**
 AgroAsistan; tarımda su israfını önlemek ve mahsul verimliliğini artırmak için geliştirilmiş, meteorolojik veriler ile toprak/mahsul özelliklerini harmanlayarak çalışan veri odaklı bir dijital karar destek sistemidir. Temel amacı, geleneksel yöntemleri bir kenara bırakarak çiftçiye "Hangi gün, hangi saatte ve kaç dakika" sulama yapması gerektiğini net bir şekilde bildiren akıllı bir danışmanlık hizmeti sunmaktır.
